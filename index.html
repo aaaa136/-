@@ -31,17 +31,48 @@
       margin: 0.2em 0;
     }
 
+    .cover-img {
+      max-width: 300px;
+      height: auto;
+      margin-top: 1em;
+    }
+
     nav {
       background-color: #fff;
-      padding: 1em 2em;
+      padding: 2em;
       border-bottom: 2px solid var(--main-color);
     }
 
-    nav a {
-      margin-right: 1em;
-      text-decoration: none;
+    nav ul.toc {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul.toc li {
+      margin: 1em 0;
+    }
+
+    nav ul.toc li a {
+      position: relative;
+      display: block;
+      padding: 0.5em 0.8em 0.5em 1.5em;
       color: var(--accent-color);
       font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+
+    nav ul.toc li a span {
+      margin-right: 0.5em;
+    }
+
+    nav ul.toc li a:hover {
+      background-color: #e8f5e9;
+      border-left: 4px solid var(--main-color);
+      color: #1b5e20;
+      transform: translateX(5px);
     }
 
     section {
@@ -74,19 +105,6 @@
       text-align: left;
     }
 
-    footer {
-      text-align: center;
-      padding: 2em;
-      background: var(--main-color);
-      color: white;
-    }
-
-    .cover-img {
-      max-width: 300px;
-      height: auto;
-      margin-top: 1em;
-    }
-
     blockquote {
       background-color: #e8f5e9;
       border-left: 5px solid var(--main-color);
@@ -95,8 +113,11 @@
       font-style: italic;
     }
 
-    section#qa strong {
-      color: var(--accent-color);
+    footer {
+      text-align: center;
+      padding: 2em;
+      background: var(--main-color);
+      color: white;
     }
 
     .video-container {
@@ -117,16 +138,16 @@
     }
 
     @media screen and (max-width: 600px) {
+      .cover-img {
+        width: 100%;
+      }
+
       nav {
         padding: 1em;
       }
 
       section {
         padding: 1.2em;
-      }
-
-      .cover-img {
-        width: 100%;
       }
     }
   </style>
@@ -136,19 +157,21 @@
   <header>
     <h1>みんスタオンラインガイドブック</h1>
     <p>チーム：ONIMOTSU II（柏の葉）</p>
-    <!-- ※画像は Web に合わせて相対パスを指定 -->
+    <!-- 画像パスは正しく配置する必要があります -->
     <img src="C:\Users\Mino0\Downloads\ダウンロード.jpg" alt="ガイドブック表紙画像" class="cover-img" />
   </header>
 
   <nav>
-    <a href="#intro">1. はじめに</a>
-    <a href="#meaning">2. 意義</a>
-    <a href="#compare">3. オンラインと対面</a>
-    <a href="#env">4. 環境づくり</a>
-    <a href="#how">5. 参加方法</a>
-    <a href="#qa">6. Q&A</a>
-    <a href="#voices">7. 体験者の声</a>
-    <a href="#video">8. 説明動画</a>
+    <ul class="toc">
+      <li><a href="#intro"><span>1.</span> はじめに</a></li>
+      <li><a href="#meaning"><span>2.</span> 意義</a></li>
+      <li><a href="#compare"><span>3.</span> オンラインと対面</a></li>
+      <li><a href="#env"><span>4.</span> 環境づくり</a></li>
+      <li><a href="#how"><span>5.</span> 参加方法</a></li>
+      <li><a href="#qa"><span>6.</span> Q&A</a></li>
+      <li><a href="#voices"><span>7.</span> 体験者の声</a></li>
+      <li><a href="#video"><span>8.</span> 説明動画</a></li>
+    </ul>
   </nav>
 
   <section id="intro">
@@ -233,7 +256,7 @@
     <h2>8. 説明動画</h2>
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/FsJUEH2cPX8?si=LvWhjAagVKCYjmoN"
-              title="みんスタ説明動画"
+              title="説明動画"
               allowfullscreen></iframe>
     </div>
   </section>
@@ -244,3 +267,4 @@
 
 </body>
 </html>
+
