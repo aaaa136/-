@@ -4,36 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>みんスタオンラインガイドブック</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --main-color: #4CAF50;
+      --light-bg: #f0fdf4;
+      --accent-color: #388E3C;
+    }
+
     body {
       font-family: 'Noto Sans JP', sans-serif;
       line-height: 1.8;
-      background-color: #f7f7f7;
+      background-color: var(--light-bg);
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #ffe4f0;
+      background-color: var(--main-color);
       padding: 2em;
       text-align: center;
+      color: white;
     }
 
     header h1 {
-      color: #d63384;
       margin: 0.2em 0;
     }
 
     nav {
       background-color: #fff;
       padding: 1em 2em;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 2px solid var(--main-color);
     }
 
     nav a {
       margin-right: 1em;
       text-decoration: none;
-      color: #0066cc;
+      color: var(--accent-color);
+      font-weight: bold;
     }
 
     section {
@@ -47,7 +55,7 @@
 
     section h2 {
       color: #333;
-      border-bottom: 2px solid #ffd9ec;
+      border-bottom: 2px solid var(--main-color);
       padding-bottom: 0.5em;
     }
 
@@ -69,13 +77,57 @@
     footer {
       text-align: center;
       padding: 2em;
-      background: #ffe4f0;
+      background: var(--main-color);
+      color: white;
     }
 
-    .qr {
-      display: block;
-      margin: 1em auto;
-      max-width: 200px;
+    .cover-img {
+      max-width: 300px;
+      height: auto;
+      margin-top: 1em;
+    }
+
+    blockquote {
+      background-color: #e8f5e9;
+      border-left: 5px solid var(--main-color);
+      margin: 1em 0;
+      padding: 1em;
+      font-style: italic;
+    }
+
+    section#qa strong {
+      color: var(--accent-color);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-top: 2em;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        padding: 1em;
+      }
+
+      section {
+        padding: 1.2em;
+      }
+
+      .cover-img {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -84,23 +136,26 @@
   <header>
     <h1>みんスタオンラインガイドブック</h1>
     <p>チーム：ONIMOTSU II（柏の葉）</p>
+    <!-- ※画像は Web に合わせて相対パスを指定 -->
+    <img src="C:\Users\Mino0\Downloads\ダウンロード.jpg" alt="ガイドブック表紙画像" class="cover-img" />
   </header>
 
   <nav>
     <a href="#intro">1. はじめに</a>
-    <a href="#meaning">2. オンライン会議参加の意義</a>
+    <a href="#meaning">2. 意義</a>
     <a href="#compare">3. オンラインと対面</a>
     <a href="#env">4. 環境づくり</a>
     <a href="#how">5. 参加方法</a>
     <a href="#qa">6. Q&A</a>
     <a href="#voices">7. 体験者の声</a>
+    <a href="#video">8. 説明動画</a>
   </nav>
 
   <section id="intro">
     <h2>1. はじめに</h2>
     <p>
       このガイドブックは、地域活動へのオンライン参加をより身近に感じてもらうために作成されました。
-      多様な人の声が届く環境を作り、地域の活性化につなげることが目的です。対面の会議に参加できなくても、オンライン会議で参加する場合でも対面と変わらない満足度を得ることを目的にしています。
+      多様な人々の声が反映される環境をつくり、地域の活性化を図ることが目的です。対面会議に参加できない方でも、オンラインで同等の満足感が得られることを目指しています。
     </p>
   </section>
 
@@ -153,7 +208,7 @@
     <ol>
       <li>リンクをクリックして参加（ZoomやGoogle Meet）</li>
       <li>名前を入力（ニックネームでもOK）</li>
-      <li>発言はマイクON・不要時はミュート</li>
+      <li>発言時はマイクON・不要時はミュート</li>
       <li>他人の意見を尊重する</li>
       <li>誹謗中傷や荒らしは禁止</li>
     </ol>
@@ -162,7 +217,7 @@
   <section id="qa">
     <h2>6. よくある質問（Q&A）</h2>
     <ul>
-      <li><strong>Q:</strong> ネットが切断された場合はどうすればいい？<br><strong>A:</strong> 再接続すれば再参加できます。</li>
+      <li><strong>Q:</strong> ネットが切断された場合は？<br><strong>A:</strong> 再接続すれば再参加できます。</li>
       <li><strong>Q:</strong> 匿名で参加できますか？<br><strong>A:</strong> はい。ニックネームで構いません。</li>
       <li><strong>Q:</strong> 初めてでも大丈夫？<br><strong>A:</strong> マニュアルを見れば安心して参加できます！</li>
     </ul>
@@ -174,7 +229,14 @@
     <blockquote>「このガイドのおかげで運営もスムーズになりました。」（運営B）</blockquote>
   </section>
 
-  <section id="form">
+  <section id="video">
+    <h2>8. 説明動画</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/FsJUEH2cPX8?si=LvWhjAagVKCYjmoN"
+              title="みんスタ説明動画"
+              allowfullscreen></iframe>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 ONIMOTSU II
